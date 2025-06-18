@@ -4,6 +4,16 @@ nav:
   - Services: 
     - Getting Started: services/getting-started.md
     - FAIR Assessment: services/ff-assessment.md
+    - Automated I-ADOPT service: services/ff-iadopt.md
+    - Open Research Knowledge Graph (ORKG): services/ff-orkg.md
+    - JackDAw AI LLM model integrating GI services: services/ff-jackdaw.md
+    - FAIR Implementation Profile (FIP): services/ff-fip.md
+    - Metadata extraction: services/ff-metadata-extraction.md
+    - Salient sentence extraction: services/ff-salient.md
+    - Scientific claims extraction and verification: services/ff-claims.md
+    - TerraQ: services/ff-terraq.md
+    - GeoQA2: services/ff-geoqa2.md
+    - ToposKG: services/toposkg.md
 theme:
   name: material
 
