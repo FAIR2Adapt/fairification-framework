@@ -1,6 +1,9 @@
 site_name: Fairification Framework
 nav:
   - Architecture: architecture.md
+  - Services: 
+    - Getting Started: services/getting-started.md
+    - FAIR Assessment: services/ff-assessment.md
 theme:
   name: material
 
