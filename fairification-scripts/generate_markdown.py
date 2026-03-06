@@ -18,24 +18,6 @@ def indicator_name(check):
     indicator = check.get("assessesIndicator", {})
     return indicator.get("@id", "unknown").split("/")[-1]
 
-def generate_badge(checks):
-    passed = sum(1 for c in checks if c.get("output") == "true")
-    total = len(checks)
-
-    ratio = passed / total if total else 0
-
-    if ratio >= 0.8:
-        color = "brightgreen"
-    elif ratio >= 0.6:
-        color = "yellow"
-    else:
-        color = "red"
-
-    badge_url = f"https://img.shields.io/badge/tests-{passed}%2F{total}-{color}"
-    badge_md = f"![Tests]({badge_url})"
-
-    return badge_md, passed, total
-
 
 def build_markdown(data):
     name = data.get("name", "Software Quality Assessment")
@@ -52,6 +34,31 @@ def build_markdown(data):
     by_indicator = defaultdict(list)
     for check in checks:
         by_indicator[indicator_name(check)].append(check)
+
+    def escape_html(text):
+        text = str(text)
+        return (
+            text.replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace('"', "&quot;")
+        )
+
+    def make_anchor(text):
+        anchor = str(text).strip().lower()
+        anchor = anchor.replace(" ", "-")
+        anchor = anchor.replace("/", "-")
+        anchor = anchor.replace(".", "")
+        anchor = anchor.replace(":", "")
+        return anchor
+
+    def row_color(output):
+        output = str(output).strip().lower()
+        if output == "true":
+            return "#d4edda"   # light green
+        if output == "false":
+            return "#f8d7da"   # light red
+        return "#fff3cd"       # light yellow for error/unknown
 
     md = []
 
@@ -72,31 +79,47 @@ def build_markdown(data):
     md.append(f"- **Errors (`error`)**: {counts.get('error', 0)}\n")
 
     md.append("## Results Table\n")
-    md.append("| Test ID | Test Name | Indicator | Output |")
-    md.append("|---|---|---|---|")
+    md.append('<table>')
+    md.append('  <thead>')
+    md.append('    <tr>')
+    md.append('      <th>Test ID</th>')
+    md.append('      <th>Test Name</th>')
+    md.append('      <th>Result</th>')
+    md.append('    </tr>')
+    md.append('  </thead>')
+    md.append('  <tbody>')
 
     for check in checks:
-        test_name = check.get("test_name", "")
-        test_name = test_name.replace("|", "\\|")
+        test_id = escape_html(check.get("test_id", ""))
+        test_name = escape_html(check.get("test_name", ""))
+        output = status_value(check)
+        output_html = escape_html(output)
 
-        md.append(
-            f"| {check.get('test_id','')} "
-            f"| {test_name} "
-            f"| {indicator_name(check)} "
-            f"| {status_value(check)} |"
-        )
+        ind = indicator_name(check)
+        detail_anchor = make_anchor(f"{ind}-{check.get('test_id', '')}")
 
-    md.append("\n## Detailed Results by Indicator\n")
+        md.append(f'    <tr style="background-color: {row_color(output)};">')
+        md.append(f'      <td>{test_id}</td>')
+        md.append(f'      <td>{test_name}</td>')
+        md.append(f'      <td><a href="#{detail_anchor}">{output_html}</a></td>')
+        md.append('    </tr>')
+
+    md.append('  </tbody>')
+    md.append('</table>\n')
+
+    md.append("## Detailed Results by Indicator\n")
 
     for ind in sorted(by_indicator):
         md.append(f"### {ind}\n")
         for check in by_indicator[ind]:
-            md.append(f"#### {check.get('test_name','Unnamed test')}\n")
-            md.append(f"- **Test ID:** {check.get('test_id','')}")
-            md.append(f"- **Output:** {status_value(check)}")
-            md.append(f"- **Process:** {check.get('process','N/A')}")
-            md.append(f"- **Evidence:** {check.get('evidence','N/A')}")
-            md.append(f"- **Suggestions:** {check.get('suggestions','N/A')}\n")
+            detail_anchor = make_anchor(f"{ind}-{check.get('test_id', '')}")
+            md.append(f'<a id="{detail_anchor}"></a>')
+            md.append(f"#### {check.get('test_name', 'Unnamed test')}\n")
+            md.append(f"- **Test ID:** {check.get('test_id', '')}")
+            md.append(f"- **Result:** {status_value(check)}")
+            md.append(f"- **Process:** {check.get('process', 'N/A')}")
+            md.append(f"- **Evidence:** {check.get('evidence', 'N/A')}")
+            md.append(f"- **Suggestions:** {check.get('suggestions', 'N/A')}\n")
 
     return "\n".join(md)
 
