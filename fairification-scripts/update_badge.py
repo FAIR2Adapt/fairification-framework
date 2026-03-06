@@ -61,7 +61,7 @@ def badge_color(score: int) -> str:
 
 def build_badge_url(score: int) -> str:
     color = badge_color(score)
-    label = quote("Metadata quality")
+    label = quote("FAIRness")
     message = quote(f"{score}%")
     return f"https://img.shields.io/badge/{label}-{message}-{color}"
 
