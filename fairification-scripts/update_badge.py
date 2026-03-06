@@ -61,7 +61,7 @@ def badge_color(score: int) -> str:
 
 def build_badge_url(score: int) -> str:
     color = badge_color(score)
-    label = quote("quality")
+    label = quote("Metadata quality")
     message = quote(f"{score}%")
     return f"https://img.shields.io/badge/{label}-{message}-{color}"
 
@@ -70,7 +70,7 @@ def build_badge_markdown(url: str, score: int, passed: int, failed: int, errors:
     title = f"score: {score}% | passed: {passed} | failed: {failed} | errors: {errors}"
     return (
         f"{BADGE_START}\n"
-        f'![Software quality]({url} "{title}")\n'
+        f'[![Software quality]({url} "{title}")](RSFC_REPORT.md)\n'
         f"{BADGE_END}"
     )
 
