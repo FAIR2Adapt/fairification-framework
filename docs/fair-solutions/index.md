@@ -9,6 +9,10 @@ Each FAIR Solution combines four elements:
 3. a **FAIRification Workflow** that applies the required FAIR Supporting Resources and services;
 4. a **demo FAIR Digital Object (FDO)** representing the FAIRified result.
 
+![Components of a FAIR Solution: demo Digital Object, FAIRification Plan, FAIRification Workflow and demo FAIR Digital Object.](../assets/fair-solutions/figure-7-fair-solution-components.png)
+
+*Components of a FAIR Solution: demo Digital Object, FAIRification Plan, FAIRification Workflow and demo FAIR Digital Object.*
+
 The FAIR Solutions therefore connect the user requirements with the operational FAIRification Framework and provide the main scenarios for evaluating the FAIR supporting services.
 
 | FAIR Solution | Main scenario | Main FAIRification focus |

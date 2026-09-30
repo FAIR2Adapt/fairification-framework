@@ -6,6 +6,10 @@ FAIR Solution #2 FAIRifies the complete **urban flood-risk assessment workflow**
 
 The Hamburg workflow combines social-vulnerability indicators, population exposure data, pluvial-flood hazard maps and infrastructure information.
 
+![Data sources involved in the urban climate-risk assessment.](../assets/fair-solutions/figure-13-urban-risk-data-sources.png)
+
+*Data sources involved in the urban climate-risk assessment.*
+
 ## FAIRification of heterogeneous resources
 
 The solution distinguishes:
@@ -18,6 +22,18 @@ The solution distinguishes:
 
 Datasets are enriched with persistent identifiers, metadata, semantic annotations using **I-ADOPT**, access/reuse information and FAIR Assessment results.
 
+![FAIRification workflow and analytical pipeline for urban climate-risk assessment.](../assets/fair-solutions/figure-14-urban-risk-fairification-workflow.png)
+
+*FAIRification workflow and analytical pipeline for urban climate-risk assessment.*
+
+![FAIRification strategies applied to datasets, software, outputs and publications.](../assets/fair-solutions/figure-15-urban-risk-fairification-strategies.png)
+
+*FAIRification strategies applied to datasets, software, outputs and publications.*
+
+![Example of FAIRification and FAIR Assessment of public climate-adaptation datasets in ROHub.](../assets/fair-solutions/figure-16-public-dataset-fair-assessment.png)
+
+*Example of FAIRification and FAIR Assessment of public climate-adaptation datasets in ROHub.*
+
 ## FAIR and controlled access
 
 The solution explicitly demonstrates that FAIR does not imply that all data must be open. Sensitive Hamburg building-level data and derived outputs are handled using a policy-aware access pilot:
@@ -28,6 +44,10 @@ The solution explicitly demonstrates that FAIR does not imply that all data must
 * release of the decryption key only after successful verification.
 
 Metadata remain openly Findable while the sensitive data are accessed under authentication and authorisation.
+
+![Policy-controlled access for the Hamburg building dataset using an ODRL policy.](../assets/fair-solutions/figure-17-hamburg-odrl-policy.png)
+
+*Policy-controlled access for the Hamburg building dataset using an ODRL policy.*
 
 ## Software and workflow FAIRification
 
@@ -42,9 +62,21 @@ The original ArcGIS toolbox is translated into Python and enriched with:
 
 The workflow has been adapted for execution in the **LifeWatch ERIC Workflow System**, including an FDO mode in which it consumes and produces RO-Crates. I-ADOPT-based column mapping allows input columns to be interpreted through semantic variable definitions.
 
+![FAIRification of software components through metadata generation and FAIRness-assessment automation.](../assets/fair-solutions/figure-18-software-fairification-automation.png)
+
+*FAIRification of software components through metadata generation and FAIRness-assessment automation.*
+
+![Hamburg flood-risk workflow executed in the LifeWatch ERIC Workflow System.](../assets/fair-solutions/figure-20-hamburg-lifewatch-workflow.jpeg)
+
+*Hamburg flood-risk workflow executed in the LifeWatch ERIC Workflow System.*
+
 ## FAIR outputs
 
 The final RO-Crate can aggregate datasets, software, workflows, metadata, maps, semantic annotations and FAIR Assessment reports.
+
+![Final FAIR Digital Object aggregating datasets, workflows, software, metadata and provenance.](../assets/fair-solutions/figure-19-urban-risk-final-fdo.png)
+
+*Final FAIR Digital Object aggregating datasets, workflows, software, metadata and provenance.*
 
 The workflow produces both private building-level outputs and privacy-preserving public outputs. Public layers are aggregated to HEALPix cells, supporting privacy while also aligning the output with the FAIR2Adapt DGGS ecosystem.
 
@@ -56,6 +88,6 @@ Runtime optimisation is part of the Reusability objective. Spatial indexing, geo
 
 A central validation objective is reuse of the FAIRified workflow in **Bremen**. The methodology can remain the same while the vulnerability variables differ between cities. The transfer scenario therefore demonstrates why semantic interoperability and machine-actionable metadata are important for reusable climate-adaptation workflows.
 
-## Figures from D3.2
+![Reuse and transferability of the FAIRified urban flood-risk assessment workflow from Hamburg to Bremen.](../assets/fair-solutions/figure-21-hamburg-bremen-transferability.png)
 
-![Data sources involved in the urban climate-risk FAIR Solution.](../assets/fair-solutions/figure-13-urban-risk-data-sources.png)\n\n*Figure 13. Data sources involved in the urban climate-risk FAIR Solution.*\n\n![FAIRification workflow and analytical pipeline for urban climate-risk assessment.](../assets/fair-solutions/figure-14-urban-risk-fairification-workflow.png)\n\n*Figure 14. FAIRification workflow and analytical pipeline for urban climate-risk assessment.*\n\n![FAIRification strategies applied to datasets, software, outputs and publications.](../assets/fair-solutions/figure-15-urban-risk-fairification-strategies.png)\n\n*Figure 15. FAIRification strategies applied to datasets, software, outputs and publications.*\n\n![Example of FAIRification and FAIR Assessment of public climate-adaptation datasets in ROHub.](../assets/fair-solutions/figure-16-public-dataset-fair-assessment.png)\n\n*Figure 16. Example of FAIRification and FAIR Assessment of public climate-adaptation datasets in ROHub.*\n\n![ODRL policy for the Hamburg building dataset.](../assets/fair-solutions/figure-17-hamburg-odrl-policy.png)\n\n*Figure 17. ODRL policy for the Hamburg building dataset.*\n\n![FAIRification of software components through metadata generation and FAIRness-assessment automation.](../assets/fair-solutions/figure-18-software-fairification-automation.png)\n\n*Figure 18. FAIRification of software components through metadata generation and FAIRness-assessment automation.*\n\n![Final FAIR Digital Object aggregating datasets, workflows, software, metadata and provenance.](../assets/fair-solutions/figure-19-urban-risk-final-fdo.png)\n\n*Figure 19. Final FAIR Digital Object aggregating datasets, workflows, software, metadata and provenance.*\n\n![Hamburg flood-risk workflow executed in the LifeWatch ERIC Workflow System.](../assets/fair-solutions/figure-20-hamburg-lifewatch-workflow.png)\n\n*Figure 20. Hamburg flood-risk workflow executed in the LifeWatch ERIC Workflow System.*\n\n![Reuse and transferability of the FAIRified urban flood-risk workflow from Hamburg to Bremen.](../assets/fair-solutions/figure-21-hamburg-bremen-transferability.png)\n\n*Figure 21. Reuse and transferability of the FAIRified urban flood-risk workflow from Hamburg to Bremen.*\n\n
+*Reuse and transferability of the FAIRified urban flood-risk assessment workflow from Hamburg to Bremen.*

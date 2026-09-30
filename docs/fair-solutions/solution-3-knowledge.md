@@ -20,6 +20,10 @@ The Knowledge Loom represents selected findings as machine-readable knowledge re
 
 The LifeWatch Workflow System provides the execution layer, the **TIB Knowledge Loom** supports the FAIRification of statements and evidence, and a dashboard provides a prototype visualisation and verification layer.
 
+![Knowledge dashboard linking public risk-map products, RO-Crate metadata and scientific claims.](../assets/fair-solutions/figure-22-knowledge-dashboard.png)
+
+*Knowledge dashboard linking public risk-map products, RO-Crate metadata and scientific claims.*
+
 ## FAIRification of scientific statements
 
 The curation process generates and deposits the corresponding RO-Crate and ingests it into the Knowledge Loom. Individual scientific statements receive persistent identifiers, allowing them to become independently findable, citable and reusable.
@@ -36,7 +40,3 @@ The result is a fine-grained representation in which scientific statements and t
 * RO-Crate metadata.
 
 This enables scientific findings to be inspected and verified through the dashboard while remaining connected to the underlying workflow and evidence.
-
-## Figures from D3.2
-
-![Knowledge dashboard demo linking public risk maps, RO-Crate metadata and scientific claims.](../assets/fair-solutions/figure-22-knowledge-dashboard.png)\n\n*Figure 22. Knowledge dashboard demo linking public risk maps, RO-Crate metadata and scientific claims.*\n\n

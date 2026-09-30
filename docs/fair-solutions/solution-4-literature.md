@@ -6,6 +6,10 @@ FAIR Solution #4 addresses scientific publications and climate-adaptation resour
 
 Its broader objective is to contribute to a **FAIR-by-design Portugal Adaptation Hub**.
 
+![FAIR-by-design Portugal Adaptation Hub integrating climate-adaptation data, knowledge and FAIR Digital Objects.](../assets/fair-solutions/figure-23-portugal-adaptation-hub.png)
+
+*FAIR-by-design Portugal Adaptation Hub integrating climate-adaptation data, knowledge and FAIR Digital Objects.*
+
 ## FAIRification workflow
 
 The workflow contains six main stages:
@@ -19,11 +23,19 @@ The workflow contains six main stages:
 
 The approach supports individual publications as well as batch-oriented processing of larger collections.
 
+![FAIRification workflow for transforming scientific publications into FAIR Digital Objects.](../assets/fair-solutions/figure-24-publication-fairification-workflow.png)
+
+*FAIRification workflow for transforming scientific publications into FAIR Digital Objects.*
+
 ## Metadata and semantic enrichment
 
 The enrichment stage extracts information such as authors, affiliations, keywords, publication metadata, licences, scientific variables and thematic categories.
 
 **I-ADOPT** is used to semantically describe climate-adaptation variables. Extracted metadata, semantic enrichment and provenance are then combined to produce machine-actionable FAIR Digital Objects.
+
+![Extended FAIRification workflow supporting batch-oriented publication processing and semantic enrichment.](../assets/fair-solutions/figure-25-document-enrichment-flowchart.png)
+
+*Extended FAIRification workflow supporting batch-oriented publication processing and semantic enrichment.*
 
 ## Scientific claims
 
@@ -48,7 +60,3 @@ The FAIR-by-design hub is intended to integrate datasets, publications, knowledg
 * programmatic access to claims and metadata.
 
 The pilot validation demonstrates the feasibility of combining metadata extraction, semantic enrichment, claim extraction, nanopublication generation and FAIR Digital Object creation in one FAIRification pipeline.
-
-## Figures from D3.2
-
-![FAIR-by-design Portugal Adaptation Hub integrating climate-adaptation data, knowledge and FAIR Digital Objects.](../assets/fair-solutions/figure-23-portugal-adaptation-hub.png)\n\n*Figure 23. FAIR-by-design Portugal Adaptation Hub integrating climate-adaptation data, knowledge and FAIR Digital Objects.*\n\n![FAIRification workflow for transforming scientific publications into FAIR Digital Objects.](../assets/fair-solutions/figure-24-publication-fairification-workflow.png)\n\n*Figure 24. FAIRification workflow for transforming scientific publications into FAIR Digital Objects.*\n\n![Extended workflow supporting batch-oriented publication processing and semantic enrichment.](../assets/fair-solutions/figure-25-document-enrichment-flowchart.png)\n\n*Figure 25. Extended workflow supporting batch-oriented publication processing and semantic enrichment.*\n\n
