@@ -1,25 +1,34 @@
 site_name: Fairification Framework
+
 nav:
-  - Architecture: architecture.md
-  - Services: 
-    - Getting Started: services/getting-started.md
-    - FAIR Assessment: services/ff-assessment.md
-    - Automated I-ADOPT service: services/ff-iadopt.md
-    - Open Research Knowledge Graph (ORKG): services/ff-orkg.md
-    - JackDAw AI LLM model integrating GI services: services/ff-jackdaw.md
-    - FAIR Implementation Profile (FIP): services/ff-fip.md
-    - Metadata extraction: services/ff-metadata-extraction.md
-    - Salient sentence extraction: services/ff-salient.md
-    - Scientific claims extraction and verification: services/ff-claims.md
-    - TerraQ: services/ff-terraq.md
-    - GeoQA2: services/ff-geoqa2.md
-    - ToposKG: services/toposkg.md
+- Architecture: architecture.md
+- Evaluation in the CCA case studies: evaluation.md
+- FAIR Solutions:
+  - Overview: fair-solutions/index.md
+  - "Solution #1: Coastal water quality": fair-solutions/solution-1-riomar.md
+  - "Solution #2: Urban climate risk": fair-solutions/solution-2-hamburg.md
+  - "Solution #3: Knowledge production": fair-solutions/solution-3-knowledge.md
+  - "Solution #4: Literature review": fair-solutions/solution-4-literature.md
+- Services:
+  - Getting Started: services/getting-started.md
+  - FAIR Assessment: services/ff-assessment.md
+  - Automated I-ADOPT service: services/ff-iadopt.md
+  - Open Research Knowledge Graph (ORKG): services/ff-orkg.md
+  - JackDAw AI LLM model integrating GI services: services/ff-jackdaw.md
+  - FAIR Implementation Profile (FIP): services/ff-fip.md
+  - Metadata extraction: services/ff-metadata-extraction.md
+  - Scientific claims extraction and verification: services/ff-claims.md
+  - FAIR Data Publishing Pipeline: services/ff-data-pipeline.md
+  - TerraQ: services/ff-terraq.md
+  - GeoQA2: services/ff-geoqa2.md
+  - ToposKG: services/toposkg.md
+
 theme:
   name: material
 
 markdown_extensions:
-  - admonition
-  - codehilite:
-      guess_lang: false
-  - toc:
-      permalink: true
+- admonition
+- codehilite:
+    guess_lang: false
+- toc:
+    permalink: true
