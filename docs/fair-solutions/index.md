@@ -23,7 +23,3 @@ The FAIR Solutions therefore connect the user requirements with the operational 
 The four FAIR Solutions are the practical validation layer of the Framework. They show that evaluation is not limited to testing individual services in isolation. Instead, the services are combined according to the needs of each case study and evaluated through their contribution to a complete FAIRification workflow.
 
 See [Evaluation in the CCA case studies](../evaluation.md) for the cross-service view.
-
-## Figures from D3.2
-
-![FAIR Solution components defined in D3.2.](../assets/fair-solutions/figure-7-fair-solution-components.png)\n\n*Figure 7. FAIR Solution components defined in D3.2.*\n\n
